@@ -23,6 +23,6 @@ namespace ProjectBIntroduction.Server
                 }));
         }
 
-        internal AccountController AccountController() => new(mapper);
+        public AccountController AccountController() => new(mapper);
     }
 }

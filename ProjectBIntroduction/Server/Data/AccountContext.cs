@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjectBIntroduction.Server.Data
 {
-    internal class AccountContext : AbsDataContext<Account>
+    public class AccountContext : AbsDataContext<Account>
     {
         public AccountContext() : base("Account") 
         {
@@ -36,7 +36,7 @@ namespace ProjectBIntroduction.Server.Data
             return account != null;
         }
 
-        internal Account GetByName(string username)
+        public Account GetByName(string username)
         {
             return Data.Where(x => x.Username == username).FirstOrDefault();
         }

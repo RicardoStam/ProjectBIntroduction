@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProjectBIntroduction.FrontEnd
 {
-    internal class Client
+    public class Client
     {
         private readonly ServerApi Api;
 

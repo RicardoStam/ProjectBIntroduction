@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectBIntroduction.Server.View
 {
-    internal class AccountView
+    public class AccountView
     {
         public Guid Id { get; set; }
         public string Username { get; set; }

@@ -2,7 +2,7 @@
 
 namespace ProjectBIntroduction.Server.Data
 {
-    internal abstract class AbsDataContext<T>
+    public abstract class AbsDataContext<T>
     {
         public List<T> Data { get; set; }
         private string Path;

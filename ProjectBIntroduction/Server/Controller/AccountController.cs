@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace ProjectBIntroduction.Server.Controller
 {
-    internal class AccountController
+    public class AccountController
     {
         private readonly AccountContext context;
         private readonly IMapper mapper;
@@ -21,19 +21,19 @@ namespace ProjectBIntroduction.Server.Controller
             mapper = _mapper;
         }
 
-        internal bool Create(string username, string password)
+        public bool Create(string username, string password)
         {
             if (context.UsernameExists(username)) return false;
             context.Create(username, password);
             return true;
         }
 
-        internal bool Login(string username, string password)
+        public bool Login(string username, string password)
         {
             return context.Login(username, password);
         }
 
-        internal AccountView Get(string username) 
+        public AccountView Get(string username) 
         {
             return mapper.Map<AccountView>(context.GetByName(username));
         }

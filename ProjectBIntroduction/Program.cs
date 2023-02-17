@@ -4,7 +4,7 @@ using ProjectBIntroduction.Server.Model;
 
 namespace ProjectBIntroduction
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
