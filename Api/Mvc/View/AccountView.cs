@@ -2,7 +2,7 @@
 {
     internal class AccountView
     {
-        public Guid Id { get; set; }
-        public string Username { get; set; }
+        internal Guid Id { get; set; }
+        internal string Username { get; set; }
     }
 }

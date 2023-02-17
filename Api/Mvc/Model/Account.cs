@@ -2,8 +2,8 @@
 {
     internal class Account
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
-        public string Username { get; set; }
-         public string Password { get; set; }
+        internal Guid Id { get; set; } = Guid.NewGuid();
+        internal string Username { get; set; }
+        internal string Password { get; set; }
     }
 }

@@ -4,16 +4,16 @@ namespace Api.Mvc.Data
 {
     internal class AccountContext : AbsDataContext<Account>
     {
-        public AccountContext() : base("Account") 
+        internal AccountContext() : base("Account") 
         {
         }
 
-        public bool UsernameExists(string username)
+        internal bool UsernameExists(string username)
         {
             return Data.Where(x => x.Username == username).FirstOrDefault() != null;
         }
 
-        public void Create(string username, string password)
+        internal void Create(string username, string password)
         {
 
             Account newAccount = new() {
@@ -25,7 +25,7 @@ namespace Api.Mvc.Data
             SaveChanges();
         }
 
-        public bool Login(string username, string password)
+        internal bool Login(string username, string password)
         {
             Account account = Data.Where(x => x.Username == username && x.Password == password).First();
             return account != null;

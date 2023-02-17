@@ -19,5 +19,7 @@ namespace Api
         }
 
         public AccountController AccountController() => new(mapper);
+
+        //public NewController NewController() => new(mapper);
     }
 }

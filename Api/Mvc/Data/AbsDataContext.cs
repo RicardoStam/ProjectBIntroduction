@@ -4,10 +4,10 @@ namespace Api.Mvc.Data
 {
     internal abstract class AbsDataContext<T>
     {
-        public List<T> Data { get; set; }
+        internal List<T> Data { get; set; }
         private string Path;
 
-        public AbsDataContext(string fileName)
+        internal AbsDataContext(string fileName)
         {
             if (!fileName.EndsWith(".json")) fileName += ".json";
             Path = System.IO.Path.GetFullPath("C:\\hro\\Apiduction\\Apiduction\\Server\\Data\\Sources\\" + fileName);
