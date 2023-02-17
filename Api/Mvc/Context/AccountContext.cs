@@ -1,6 +1,6 @@
 ﻿using Api.Mvc.Model;
 
-namespace Api.Mvc.Data
+namespace Api.Mvc.Context
 {
     internal class AccountContext : AbsDataContext<Account>
     {
@@ -17,6 +17,7 @@ namespace Api.Mvc.Data
         {
 
             Account newAccount = new() {
+                Id = Guid.NewGuid(),
                 Username = username,
                 Password = password
             };

@@ -1,16 +1,16 @@
 ﻿using System.Text.Json;
 
-namespace Api.Mvc.Data
+namespace Api.Mvc.Context
 {
     internal abstract class AbsDataContext<T>
     {
         internal List<T> Data { get; set; }
-        private string Path;
+        private readonly string path;
 
         internal AbsDataContext(string fileName)
         {
             if (!fileName.EndsWith(".json")) fileName += ".json";
-            Path = System.IO.Path.GetFullPath("C:\\hro\\Apiduction\\Apiduction\\Server\\Data\\Sources\\" + fileName);
+            path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName, @"Api\DataSources\"+fileName);
             Data = ReadFile();
         }
 
@@ -18,7 +18,7 @@ namespace Api.Mvc.Data
         {
             try
             {
-                string data = File.ReadAllText(Path);
+                string data = File.ReadAllText(path);
                 return JsonSerializer.Deserialize<List<T>>(data);
             }
             catch (Exception)
@@ -30,7 +30,7 @@ namespace Api.Mvc.Data
         protected void SaveChanges()
         {            
             string data = JsonSerializer.Serialize(Data);
-            File.WriteAllText(Path, data);
+            File.WriteAllText(path, data);
         }
     }
 }
