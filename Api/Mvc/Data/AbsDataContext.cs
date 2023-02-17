@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace ProjectBIntroduction.Server.Data
+namespace Api.Mvc.Data
 {
     internal abstract class AbsDataContext<T>
     {
@@ -10,7 +10,7 @@ namespace ProjectBIntroduction.Server.Data
         public AbsDataContext(string fileName)
         {
             if (!fileName.EndsWith(".json")) fileName += ".json";
-            Path = System.IO.Path.GetFullPath("C:\\hro\\ProjectBIntroduction\\ProjectBIntroduction\\Server\\Data\\Sources\\" + fileName);
+            Path = System.IO.Path.GetFullPath("C:\\hro\\Apiduction\\Apiduction\\Server\\Data\\Sources\\" + fileName);
             Data = ReadFile();
         }
 

@@ -1,11 +1,6 @@
-﻿using ProjectBIntroduction.Server.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Api.Mvc.Model;
 
-namespace ProjectBIntroduction.Server.Data
+namespace Api.Mvc.Data
 {
     internal class AccountContext : AbsDataContext<Account>
     {
@@ -32,13 +27,13 @@ namespace ProjectBIntroduction.Server.Data
 
         public bool Login(string username, string password)
         {
-            Account account = Data.Where(x => x.Username == username && x.Password == password).FirstOrDefault();
+            Account account = Data.Where(x => x.Username == username && x.Password == password).First();
             return account != null;
         }
 
         internal Account GetByName(string username)
         {
-            return Data.Where(x => x.Username == username).FirstOrDefault();
+            return Data.Where(x => x.Username == username).First();
         }
     }
 }

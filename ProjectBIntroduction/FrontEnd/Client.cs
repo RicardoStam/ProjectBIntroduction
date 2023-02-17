@@ -1,18 +1,12 @@
-﻿using ProjectBIntroduction.Server;
-using ProjectBIntroduction.Server.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Api;
 
 namespace ProjectBIntroduction.FrontEnd
 {
     internal class Client
     {
-        private readonly ServerApi Api;
+        private readonly Api.Api Api;
 
-        public Client(ServerApi api)
+        public Client(Api.Api api)
         {
             Api = api;
         }

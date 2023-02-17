@@ -15,3 +15,9 @@ C:\hro\ProjectBIntroduction\ProjectBIntroduction\obj\Debug\net6.0\ProjectBIntrod
 C:\hro\ProjectBIntroduction\ProjectBIntroduction\obj\Debug\net6.0\ref\ProjectBIntroduction.dll
 C:\hro\ProjectBIntroduction\ProjectBIntroduction\bin\Debug\net6.0\AutoMapper.dll
 C:\hro\ProjectBIntroduction\ProjectBIntroduction\obj\Debug\net6.0\ProjectBIntroduction.csproj.CopyComplete
+C:\hro\ProjectBIntroduction\ProjectBIntroduction\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\hro\ProjectBIntroduction\ProjectBIntroduction\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\hro\ProjectBIntroduction\ProjectBIntroduction\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\hro\ProjectBIntroduction\ProjectBIntroduction\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\hro\ProjectBIntroduction\ProjectBIntroduction\bin\Debug\net6.0\Api.dll
+C:\hro\ProjectBIntroduction\ProjectBIntroduction\bin\Debug\net6.0\Api.pdb

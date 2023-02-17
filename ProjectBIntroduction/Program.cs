@@ -1,6 +1,5 @@
-﻿using ProjectBIntroduction.FrontEnd;
-using ProjectBIntroduction.Server.Controller;
-using ProjectBIntroduction.Server.Model;
+﻿using Api;
+using ProjectBIntroduction.FrontEnd;
 
 namespace ProjectBIntroduction
 {
@@ -8,8 +7,7 @@ namespace ProjectBIntroduction
     {
         static void Main(string[] args)
         {
-            
-            new Client(new()).Run();
+            new Client(new Api.Api()).Run();
         }
     }
 }
