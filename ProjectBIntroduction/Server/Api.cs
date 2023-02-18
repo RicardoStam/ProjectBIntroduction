@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace ProjectBIntroduction.Server
 {
-    public class ServerApi
+    public class Api
     {
         Mapper mapper;
 
-        public ServerApi()
+        public Api()
         {
             // Register model conversions;
             // cfg.CreateMap<FROM, TO>(); 

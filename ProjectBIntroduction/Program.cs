@@ -9,7 +9,7 @@ namespace ProjectBIntroduction
         static void Main(string[] args)
         {
             
-            new Client(new()).Run();
+            new Client(new Server.Api()).Run();
         }
     }
 }

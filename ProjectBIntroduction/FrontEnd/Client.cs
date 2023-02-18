@@ -10,9 +10,9 @@ namespace ProjectBIntroduction.FrontEnd
 {
     public class Client
     {
-        private readonly ServerApi Api;
+        private readonly Server.Api Api;
 
-        public Client(ServerApi api)
+        public Client(Server.Api api)
         {
             Api = api;
         }
