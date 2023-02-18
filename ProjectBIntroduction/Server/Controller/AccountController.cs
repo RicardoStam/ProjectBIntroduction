@@ -15,6 +15,7 @@ namespace ProjectBIntroduction.Server.Controller
     {
         private readonly AccountContext context;
         private readonly IMapper mapper;
+
         public AccountController(IMapper _mapper)
         {
             context = new AccountContext();

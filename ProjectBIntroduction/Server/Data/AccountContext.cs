@@ -15,7 +15,7 @@ namespace ProjectBIntroduction.Server.Data
 
         public bool UsernameExists(string username)
         {
-            return Data.Where(x => x.Username == username).FirstOrDefault() != null;
+            return Data.Where(x => x.Username == username).Any();
         }
 
         public void Create(string username, string password)

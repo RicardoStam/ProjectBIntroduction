@@ -4,13 +4,15 @@ namespace ProjectBIntroduction.Server.Data
 {
     public abstract class AbsDataContext<T>
     {
-        public List<T> Data { get; set; }
+        protected List<T> Data { get; set; }
         private string Path;
 
         public AbsDataContext(string fileName)
         {
             if (!fileName.EndsWith(".json")) fileName += ".json";
-            Path = System.IO.Path.GetFullPath("C:\\hro\\ProjectBIntroduction\\ProjectBIntroduction\\Server\\Data\\Sources\\" + fileName);
+            string currentLocation = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+            
+            Path = currentLocation + @"\Server\DataSources\" + fileName;
             Data = ReadFile();
         }
 
